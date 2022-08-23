@@ -1,0 +1,64 @@
+.button {
+  position: relative;
+  border: none;
+  transition: 0.4s ease-in;
+  z-index: 1;
+  padding: 10px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+
+.btn-1:hover {
+  background: #ff96ad;
+  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+}
+
+.btn-2:hover {
+  box-shadow: inset -10.5rem 0 0 0 #ff96ad, inset 10.5rem 0 0 0 #ff96ad;
+}
+
+.btn-3::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  transition-duration: 0.6s;
+  width: 100%;
+}
+
+.btn-3:hover::after {
+  height: 100%;
+  background: #ff96ad;
+}
+
+.btn-4:hover {
+  box-sizing: border-box;
+  border: 2px solid #ff96ad;
+  color: #ff96ad;
+  background-color: #17181c;
+}
+
+.btn-5 {
+  overflow: hidden;
+}
+
+.btn-5::after {
+  height: 100%;
+  left: -40%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+}
+
+.btn-5:hover::after {
+  width: 140%;
+  background: #ff96ad;
+}
